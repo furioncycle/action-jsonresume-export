@@ -11,8 +11,8 @@ echo "Installing theme: ${THEME}"
 # NOTE: this needs to be installed locally, not globally
 npm install ${THEME_PACKAGE}
 
-echo "Exporting HTML..."
-resume export --resume ${RESUME} --theme ${THEME} --format html ${OUTPUT}
-
 echo "Exporting PDF..."
 resume export --resume ${RESUME} --theme ${THEME} --format pdf ${PDF}
+
+echo "Exporting HTML..."
+resume export --resume ${RESUME} --theme ${THEME} --format html ${OUTPUT}
