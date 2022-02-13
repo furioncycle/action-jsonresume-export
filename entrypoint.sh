@@ -11,3 +11,4 @@ echo "Installing theme: ${THEME}"
 npm install ${THEME_PACKAGE}
 
 resume export --resume ${RESUME} --theme ${THEME} --format html ${OUTPUT}
+resume export --resume ${RESUME} --theme ${THEME} --format pdf resume.pdf
