@@ -23,6 +23,11 @@ inputs:
       Output file path for exported HTML file.
     required: false
     default: 'index.html'
+  pdf_filepath:
+    description: |
+      Pdf file path for exported PDF file 
+    required: false
+    default: 'resume.pdf'
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -30,3 +35,4 @@ runs:
     - ${{ inputs.theme }}
     - ${{ inputs.resume_filepath }}
     - ${{ inputs.output_filepath }}
+    - ${{ inputs.pdf_filepath }}
