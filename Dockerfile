@@ -10,6 +10,5 @@ LABEL maintainer="Kelvin Tay <kelvintaywl@gmail.com>"
 
 RUN npm install -g resume-cli@3.0.3
 COPY entrypoint.sh /entrypoint.sh
-COPY EntryPointPDF.sh /EntryPointPDF.sh
 
-ENTRYPOINT ["/entrypoint.sh","/EntryPointPDF.sh"]
+ENTRYPOINT ["/entrypoint.sh"]

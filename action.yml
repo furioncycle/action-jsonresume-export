@@ -8,7 +8,7 @@ inputs:
   theme:
     description: |
       JSONResume theme name.
-      Assumes the theme package would be found 
+      Assumes the theme package would be found
       as `jsonresume-theme-{theme}` in NPM.
       You can search for themes at https://npmsearch.com/?q=jsonresume-theme
     required: true
@@ -18,14 +18,9 @@ inputs:
       File path of the resume in JSONResume format
     required: false
     default: 'resume.json'
-  output_filepath:
-    description: |
-      Output file path for exported HTML file.
-    required: false
-    default: 'index.html'
   pdf_filepath:
     description: |
-      Pdf file path for exported PDF file 
+      Pdf file path for exported PDF file
     required: false
     default: 'resume.pdf'
 runs:
@@ -34,5 +29,4 @@ runs:
   args:
     - ${{ inputs.theme }}
     - ${{ inputs.resume_filepath }}
-    - ${{ inputs.output_filepath }}
     - ${{ inputs.pdf_filepath }}
