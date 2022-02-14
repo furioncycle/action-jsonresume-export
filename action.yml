@@ -8,7 +8,7 @@ inputs:
   theme:
     description: |
       JSONResume theme name.
-      Assumes the theme package would be found 
+      Assumes the theme package would be found
       as `jsonresume-theme-{theme}` in NPM.
       You can search for themes at https://npmsearch.com/?q=jsonresume-theme
     required: true
@@ -23,11 +23,6 @@ inputs:
       Output file path for exported HTML file.
     required: false
     default: 'index.html'
-  pdf_filepath:
-    description: |
-      Pdf file path for exported PDF file 
-    required: false
-    default: 'resume.pdf'
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -35,4 +30,3 @@ runs:
     - ${{ inputs.theme }}
     - ${{ inputs.resume_filepath }}
     - ${{ inputs.output_filepath }}
-    - ${{ inputs.pdf_filepath }}
